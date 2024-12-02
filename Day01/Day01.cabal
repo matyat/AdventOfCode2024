@@ -1,0 +1,27 @@
+cabal-version:      3.0
+name:               Day01
+version:            0.1.0.0
+-- synopsis:
+-- description:
+license:            MIT
+license-file:       LICENSE
+author:             Matthew Yates
+maintainer:         matthew.yates@sainsburys.co.uk
+-- copyright:
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+
+executable day01
+    other-modules: Day01
+    hs-source-dirs: src
+    main-is: Main.hs
+    build-depends: base
+
+test-suite Day01-test
+    other-modules: Day01
+    build-depends:    HUnit
+    type:             exitcode-stdio-1.0
+    hs-source-dirs:   test, src
+    main-is:          Main.hs
+    build-depends:    base
