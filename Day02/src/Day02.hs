@@ -8,9 +8,7 @@ isSafeSeq (x:y:z:xs) =
     if orderedInRange x y z
     then isSafeSeq (y:z:xs)
     else False
-isSafeSeq (_:_:[]) = True
-isSafeSeq (_:[]) = True
-isSafeSeq ([]) = True
+isSafeSeq _ = True
 
 orderedInRange :: Int -> Int -> Int -> Bool
 orderedInRange x y z =
